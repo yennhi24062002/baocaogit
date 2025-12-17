@@ -20,7 +20,7 @@ jobs:
         with:
           server: phamyennhi.somee.com
           username: ihnneyyy
-          password: Phamyennhi2462002@
+          password: 12345678A@nhi
           local-dir: ./
           server-dir: /www.phamyennhi.somee.com/
           dangerous-clean-slate: false
