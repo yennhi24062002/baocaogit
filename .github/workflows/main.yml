@@ -1,0 +1,26 @@
+name: Deploy to Somee
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Somee via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: phamyennhi.somee.com
+          username: ihnneyyy
+          password: Phamyennhi2462002@
+          local-dir: ./
+          server-dir: /www.phamyennhi.somee.com/
+          dangerous-clean-slate: false
